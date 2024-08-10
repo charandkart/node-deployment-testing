@@ -1,5 +1,5 @@
 import express from "express";
-import cartRoutes from "./src/routes/cart";
+import cartRoutes from "./routes/cart";
 
 const PORT = 8000;
 const app = express();
