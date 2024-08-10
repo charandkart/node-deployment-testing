@@ -1,0 +1,19 @@
+{
+  "port": 8000,
+  "domain": "https://node-deployment-testing.vercel.app/",
+  "mongodb": "mongodb+srv://charankr:Qg7FEBy9mmt5ZQoL@dkart-cluster.vha3u.mongodb.net/test?retryWrites=true&w=majority&appName=dkart-cluster",
+  "jwtSecret": "<your jsonwebtoken secret code>",
+  "project": "nodejs-testing",
+  "tables": {
+    "test": ""
+  },
+  "api_keys": ["internal.services@ecom.com"],
+  "session_secret_key": "NO-SECRET",
+  "microservices": {
+    "kafka_producer": "https://dkart-kafka.vercel.app"
+  },
+  "kafka_topic": {
+    "service_logs": "service_logs",
+    "system_logs": "system_logs"
+  }
+}
