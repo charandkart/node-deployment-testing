@@ -1,5 +1,5 @@
 import express from "express";
-import cartRoutes from "./routes/cart";
+import routes from "./routes";
 
 const PORT = 8000;
 const app = express();
@@ -12,7 +12,7 @@ app.get("/about", (req, res) => {
   res.send("About route 🎉 ");
 });
 
-app.use("/cart", cartRoutes);
+app.use("/api", routes);
 
 app.listen(PORT, () => {
   console.log(`✅ Server is running on port ${PORT}`);
