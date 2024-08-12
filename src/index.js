@@ -2,7 +2,7 @@
 import express from "express";
 // import routes from "./routes";
 
-// const PORT = config.get("port") || 8000;
+const PORT = 8000;
 const app = express();
 
 app.get("/", (req, res) => {
