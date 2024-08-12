@@ -5,9 +5,11 @@ import mongoose from "mongoose";
 
 const connectionString = process.env.MONGODB;
 
-export const initializeDB = () => {
-  mongoose.connect(connectionString, () => {
+export const initializeDB = async () => {
+  try {
+    await mongoose.connect(connectionString);
     console.log("Connected to MongoDB!!");
-    // logger.info("Connected to MongoDB!!");
-  });
+  } catch (error) {
+    console.log("Failed to connect to MongoDB!!", error);
+  }
 };
