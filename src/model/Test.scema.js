@@ -4,8 +4,15 @@ const TestSchema = new Schema({
   name: {
     type: String,
   },
-
-  timestamp: {
+  update_count: {
+    type: Number,
+    default: 0,
+  },
+  created_on: {
+    type: Date,
+    default: Date.now(),
+  },
+  modified_on: {
     type: Date,
     default: Date.now(),
   },
