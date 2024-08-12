@@ -1,9 +1,9 @@
-import config from "config";
+import "dotenv/config";
 import mongoose from "mongoose";
 
 // import logger from "./lib/logger";
 
-const connectionString = config.get("mongodb");
+const connectionString = process.env.MONGODB;
 
 export const initializeDB = () => {
   mongoose.connect(connectionString, () => {
