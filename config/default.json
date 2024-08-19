@@ -1,8 +1,8 @@
 {
   "port": 8000,
   "domain": "https://node-deployment-testing.vercel.app/",
-  "mongodb": "mongodb+srv://charankr:Qg7FEBy9mmt5ZQoL@dkart-cluster.vha3u.mongodb.net/test?retryWrites=true&w=majority&appName=dkart-cluster",
-  "jwtSecret": "<your jsonwebtoken secret code>",
+  "mongodb_uri": "mongodb+srv://charankr:Qg7FEBy9mmt5ZQoL@dkart-cluster.vha3u.mongodb.net/test?retryWrites=true&w=majority&appName=dkart-cluster",
+  "jwt_secret": "<your jsonwebtoken secret code>",
   "project": "nodejs-testing",
   "tables": {
     "test": ""

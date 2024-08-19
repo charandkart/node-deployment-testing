@@ -32,6 +32,8 @@ export class CartService {
 
       await newData.save();
 
+      console.log(newData);
+
       return newData;
     } catch (error) {
       throw error;
@@ -42,7 +44,7 @@ export class CartService {
     try {
       const data = await Test.findById(id);
 
-      if (!data) throw new Error("Cart Id doesnot exist");
+      if (!data) throw Error("Cart Id doesnot exist");
 
       return data;
     } catch (error) {

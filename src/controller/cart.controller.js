@@ -27,8 +27,10 @@ export const cartController = {
   },
   createNewCart: async (req, res, next) => {
     try {
+      console.log(req.body);
+
       const cartService = new CartService();
-      const data = cartService.createNewCart(req.body);
+      const data = await cartService.createNewCart(req.body);
 
       return res.status(201).json({
         msg: "Created Successfully",
@@ -41,7 +43,7 @@ export const cartController = {
   getByCartId: async (req, res, next) => {
     try {
       const cartService = new CartService();
-      const data = cartService.getByCartId(req.params.id);
+      const data = await cartService.getByCartId(req.params.id);
 
       return res.status(200).json({
         msg: "Success",
@@ -54,7 +56,7 @@ export const cartController = {
   updateByCartId: async (req, res, next) => {
     try {
       const cartService = new CartService();
-      const data = cartService.updateByCartId(req.params.id, req.body);
+      const data = await cartService.updateByCartId(req.params.id, req.body);
 
       return res.status(200).json({
         msg: "Success",
@@ -67,7 +69,7 @@ export const cartController = {
   deleteByCartId: async (req, res, next) => {
     try {
       const cartService = new CartService();
-      const data = cartService.deleteById(req.params.id);
+      const data = await cartService.deleteById(req.params.id);
 
       return res.status(200).json({
         msg: "Success",
