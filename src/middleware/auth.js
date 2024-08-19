@@ -2,7 +2,8 @@ import "dotenv/config";
 import config from "config";
 import jwt from "jsonwebtoken";
 
-const ALLOWED_API_KEYS = config.get("api_keys") || process.env.API_KEYS;
+// const ALLOWED_API_KEYS = config.get("api_keys") || process.env.API_KEYS;
+const ALLOWED_API_KEYS = process.env.API_KEYS;
 
 export const auth = async (req, res, next) => {
   if (req.method === "GET") {

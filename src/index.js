@@ -1,5 +1,5 @@
 import "dotenv/config";
-import config from "config";
+// import config from "config";
 import express from "express";
 import morgan from "morgan";
 import cors from "cors";
@@ -10,7 +10,8 @@ import errorHandler from "./lib/error.handler";
 
 initializeDB();
 
-const PORT = config.get("port") || process.env.PORT || 8000;
+// const PORT = config.get("port") || process.env.PORT || 8000;
+const PORT = process.env.PORT || 8000;
 const app = express();
 
 const httpReqLogFormat =

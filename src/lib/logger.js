@@ -1,11 +1,9 @@
 import "dotenv/config";
-import config from "config";
 import path from "path";
 import winston from "winston";
 import fs from "fs";
 
-const project_name =
-  config.get("project") || process.env.PROJECT || "project-name";
+const project_name = process.env.PROJECT || "project-name";
 const { timestamp, label, colorize, combine, json, simple } = winston.format;
 
 const logDir = `${path.resolve("./")}/logs`;
